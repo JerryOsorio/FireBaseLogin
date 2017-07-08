@@ -17,9 +17,9 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
 
     private FirebaseAuth firebaseAuth;
 
-    private TextView textViewUserEmail;
+    private TextView txt_username;
 
-    private Button buttonLogout;
+    private Button btn_logout;
 
 
     @Override
@@ -34,18 +34,18 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-        textViewUserEmail = (TextView) findViewById(R.id.textViewUsername);
+        txt_username = (TextView) findViewById(R.id.ap_txt_username);
 
-        textViewUserEmail.setText("Welcome "+user.getEmail());
-        buttonLogout = (Button) findViewById(R.id.buttonLogout);
+        txt_username.setText("Welcome "+user.getEmail());
+        btn_logout = (Button) findViewById(R.id.ap_btn_logout);
 
-        buttonLogout.setOnClickListener(this);
+        btn_logout.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        if(view == buttonLogout){
+        if(view == btn_logout){
             firebaseAuth.signOut();
             finish();
             startActivity(new Intent(this, LoginActivity.class));

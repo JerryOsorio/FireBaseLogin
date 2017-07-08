@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jerry.firebaselogin.MainActivity">
+    tools:context="com.example.jerry.firebaselogin.SignUpActivity">
 
     <LinearLayout
 
@@ -17,27 +17,27 @@
 
         <EditText
             android:inputType="textEmailAddress"
-            android:id="@+id/editTextUsername"
+            android:id="@+id/asu_edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your username"/>
 
         <EditText
             android:inputType="textPassword"
-            android:id="@+id/editTextPassword"
+            android:id="@+id/asu_edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your password"/>
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/asu_btn_register"
             android:text="Sign Up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
             android:text="Already Registered? Sign in here"
-            android:id="@+id/textViewSignin"
+            android:id="@+id/asu_txt_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"/>

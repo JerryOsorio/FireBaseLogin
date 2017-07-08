@@ -8,7 +8,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/al_ll_main"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -17,27 +17,27 @@
 
         <EditText
             android:inputType="textEmailAddress"
-            android:id="@+id/editTextEmail"
+            android:id="@+id/al_edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your username"/>
+            android:hint="Username"/>
 
         <EditText
             android:inputType="textPassword"
-            android:id="@+id/editTextPassword"
+            android:id="@+id/al_edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your password"/>
+            android:hint="Password"/>
 
         <Button
-            android:id="@+id/buttonSignIn"
-            android:text="Sign Up"
+            android:id="@+id/al_btn_sign_in"
+            android:text="Sign In"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
             android:text="No account? Sign up here"
-            android:id="@+id/textViewSignUp"
+            android:id="@+id/al_txt_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"/>
@@ -46,13 +46,14 @@
     </LinearLayout>
 
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout2"
+        android:layout_above="@+id/al_ll_main"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:text="Sign Up Page" />
+        android:textSize="24sp"
+        android:text="Login Page" />
 
 </RelativeLayout>

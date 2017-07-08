@@ -20,10 +20,10 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
 
-    private Button buttonSignIn;
-    private EditText editTextEmail;
-    private EditText editTextPassword;
-    private TextView textViewSignUp;
+    private Button btn_sign_in;
+    private EditText edt_email;
+    private EditText edt_password;
+    private TextView txt_sign_up;
     private ProgressBar progressBar;
 
     private FirebaseAuth firebaseAuth;
@@ -32,28 +32,30 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        firebaseAuth = FirebaseAuth.getInstance();
+/*
+firebaseAuth = FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser() !=null){
             //profile activity here
             finish();
             startActivity(new Intent(getApplicationContext(),profileActivity.class));
         }
+ */
 
-        buttonSignIn = (Button) findViewById(R.id.buttonSignIn);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textViewSignUp = (TextView) findViewById(R.id.textViewSignUp);
+
+        btn_sign_in = (Button) findViewById(R.id.al_btn_sign_in);
+        edt_email = (EditText) findViewById(R.id.al_edt_email);
+        edt_password = (EditText) findViewById(R.id.al_edt_password);
+        txt_sign_up = (TextView) findViewById(R.id.al_txt_sign_up);
 
         progressBar = new ProgressBar(this);
 
-        buttonSignIn.setOnClickListener(this);
-        textViewSignUp.setOnClickListener(this);
+        btn_sign_in.setOnClickListener(this);
+        txt_sign_up.setOnClickListener(this);
     }
 
     public void userLogin(){
-        String email = editTextEmail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
+        String email = edt_email.getText().toString().trim();
+        String password = edt_password.getText().toString().trim();
 
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show();
@@ -84,12 +86,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        if(view == buttonSignIn){
+        if(view == btn_sign_in){
             userLogin();
         }
-        if(view == textViewSignUp){
+        if(view == txt_sign_up){
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, SignUpActivity.class));
         }
     }
 }
