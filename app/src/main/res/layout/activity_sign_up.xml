@@ -1,56 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.jerry.firebaselogin.SignUpActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
-
-        android:orientation="vertical"
+        android:id="@+id/ap_ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout">
+        android:orientation="vertical">
 
         <EditText
-            android:inputType="textEmailAddress"
             android:id="@+id/asu_edt_email"
+            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your username"/>
 
         <EditText
-            android:inputType="textPassword"
             android:id="@+id/asu_edt_password"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your password"/>
 
         <Button
             android:id="@+id/asu_btn_register"
-            android:text="Sign Up"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Sign Up"/>
 
         <TextView
-            android:text="Already Registered? Sign in here"
             android:id="@+id/asu_txt_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:text="Already Registered? Sign in here"/>
     </LinearLayout>
 
     <TextView
         android:id="@+id/editText"
-        android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
+        android:layout_above="@+id/ap_ll_main"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
+        android:textSize="24sp"
         android:text="Sign Up Page" />
 
 </RelativeLayout>
